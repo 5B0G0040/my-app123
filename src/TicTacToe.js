@@ -4,7 +4,7 @@ import './App.css'; // 引入全局 CSS 文件
 const TicTacToe = () => {
   const [gameBoard, setGameBoard] = useState(Array(9).fill(''));
   const [currentPlayer, setCurrentPlayer] = useState('X');
-  const [gameStatus, setGameStatus] = useState('Next Player: X');
+  const [gameStatus, setGameStatus] = useState('下一位玩家: X');
 
   const handleCellClick = (index) => {
     if (gameBoard[index] !== '' || checkWinner()) return;
@@ -15,13 +15,13 @@ const TicTacToe = () => {
 
     const winner = checkWinner(newBoard);
     if (winner) {
-      setGameStatus(`Player ${winner} Wins!`);
+      setGameStatus(`玩家 ${winner} Wins!`);
     } else if (newBoard.every(cell => cell)) {
       setGameStatus('Game Draw!');
     } else {
       const nextPlayer = currentPlayer === 'X' ? 'O' : 'X';
       setCurrentPlayer(nextPlayer);
-      setGameStatus(`Next Player: ${nextPlayer}`);
+      setGameStatus(`下一位玩家: ${nextPlayer}`);
     }
   };
 
@@ -41,14 +41,8 @@ const TicTacToe = () => {
     return null;
   };
 
-  const resetGame = () => {
-    setGameBoard(Array(9).fill(''));
-    setCurrentPlayer('X');
-    setGameStatus('Next Player: X');
-  };
-
   return (
-    <div className="game-container">
+    <div className="game-wrapper">
       <h1>Tic-Tac-Toe Game</h1>
       <div className="game-board">
         {gameBoard.map((cell, index) => (
@@ -63,7 +57,6 @@ const TicTacToe = () => {
       </div>
       <div className="game-info">
         <p>{gameStatus}</p>
-        <button onClick={resetGame}>Reset Game</button>
       </div>
     </div>
   );
