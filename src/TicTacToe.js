@@ -15,7 +15,7 @@ const TicTacToe = () => {
 
     const winner = checkWinner(newBoard);
     if (winner) {
-      setGameStatus(`玩家 ${winner} Wins!`);
+      setGameStatus(`玩 家 ${winner} Wins!`);
     } else if (newBoard.every(cell => cell)) {
       setGameStatus('Game Draw!');
     } else {
