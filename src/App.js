@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import TicTacToe from './TicTacToe'; // 导入 TicTacToe 组件
 
 function App() {
   const [color, setColor] = useState({ r: 0, g: 0, b: 0 });
@@ -19,8 +20,9 @@ function App() {
 
   const appendOperator = (op) => {
     if (op === '+/-') {
-      setCurrentInput(currentInput.charAt(0) === '-' ? currentInput.slice(1) : '-' + currentInput);
-      setCalcDisplay(currentInput.charAt(0) === '-' ? currentInput.slice(1) : '-' + currentInput);
+      const newInput = currentInput.charAt(0) === '-' ? currentInput.slice(1) : '-' + currentInput;
+      setCurrentInput(newInput);
+      setCalcDisplay(newInput);
     } else {
       setOperator(op);
       setPreviousValue(currentInput);
@@ -58,8 +60,8 @@ function App() {
       default:
         return;
     }
-    setCalcDisplay(result);
-    setCurrentInput(result);
+    setCalcDisplay(result.toString());
+    setCurrentInput(result.toString());
     setPreviousValue('');
     setOperator('');
   };
@@ -109,6 +111,10 @@ function App() {
             <button className="button-number" onClick={() => appendNumber('.')}>.</button>
             <button className="button-operator" onClick={calculateResult}>=</button>
           </div>
+        </div>
+
+        <div className="game-container">
+          <TicTacToe />
         </div>
       </header>
     </div>

@@ -12,9 +12,9 @@
   background-color: #ff00ff;
   padding: 20px;
   border-radius: 10px;
-  width: 600px; 
+  width: 600px;
   margin: auto;
-  border: 5px solid #fff; 
+  border: 5px solid #fff;
 }
 
 .slider-container {
@@ -24,13 +24,13 @@
 }
 
 .slider-container input {
-  width: 100px; 
+  width: 100px;
 }
 
 .color-display {
   margin: auto;
   border-radius: 10px;
-  border: 5px solid #fff; 
+  border: 5px solid #fff;
   margin-top: 20px;
 }
 
@@ -69,7 +69,7 @@
   border: none;
   border-radius: 50%;
   color: #fff;
-  transition: box-shadow 0.3s ease; 
+  transition: box-shadow 0.3s ease;
 }
 
 .button-number {
@@ -92,4 +92,60 @@
 .button-operator:hover,
 .button-clear:hover {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* 添加陰影效果 */
+}
+
+/* Tic-Tac-Toe 组件样式 */
+.game-container {
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #e57070;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffeb3b;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+  background-color: #fdd835;
+}
+
+.game-info {
+  margin-top: 10px;
+}
+
+.game-info p {
+  margin: 10px 0;
+}
+
+.game-info button {
+  padding: 10px 20px;
+  background-color: #8bc34a;
+  color: rgb(190, 59, 59);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.game-info button:hover {
+  background-color: #7cb342;
 }
