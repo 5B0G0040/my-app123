@@ -95,20 +95,19 @@
 }
 
 /* Tic-Tac-Toe 组件样式 */
-.game-container {
-  margin: 20px auto;
+.game-wrapper {
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 15px;
+  border: 5px solid #fff;
+  display: inline-block;
   background-color: #e57070;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
 }
 
 .game-board {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5px;
-  margin-bottom: 10px;
 }
 
 .cell {
@@ -134,18 +133,4 @@
 
 .game-info p {
   margin: 10px 0;
-}
-
-.game-info button {
-  padding: 10px 20px;
-  background-color: #8bc34a;
-  color: rgb(190, 59, 59);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.game-info button:hover {
-  background-color: #7cb342;
 }
