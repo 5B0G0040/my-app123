@@ -118,7 +118,7 @@
   align-items: center; /* 垂直居中對齊 */
   background-color: #ffef5c; /* 設定背景顏色為黃色 */
   font-size: 2rem; /* 設定字體大小為2rem */
-  font-weight: bold; /* 設定字體加粗 */
+  font-weight: bold; /* 設定字體加粗. */
   cursor: pointer; /* 設定鼠標為指針狀 */
   transition: background-color 0.3s ease; /* 設定背景顏色的過渡效果 */
 }
