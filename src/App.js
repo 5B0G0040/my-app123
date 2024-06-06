@@ -114,7 +114,7 @@ function App() {
         </div>
 
         <div className="game-container">
-          <TicTacToe /> {/* 井字遊戲組件 */}
+          <TicTacToe /> {/* 井字 遊戲組件 */}
         </div>
       </header>
     </div>
