@@ -127,7 +127,7 @@
 .game-board {
   display: grid; /* 網格佈局 */
   grid-template-columns: repeat(3, 1fr); /* 三列佈局 */
-  gap: 5px; /* 間距 */
+  gap: 5px; /* 間 距 */
   margin-right: 20px; /* 右邊距 */
 }
 
