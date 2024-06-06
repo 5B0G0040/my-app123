@@ -66,7 +66,7 @@ const TicTacToe = () => {
           ))}
         </div>
         <div className="game-info">
-          <h2>遊戲歷程</h2>
+          <h2>遊戲 歷程</h2>
           <button onClick={() => jumpToStep(0)}>遊戲開始</button>
           {history.map((_, step) => (
             step > 0 && (
