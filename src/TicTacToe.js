@@ -17,7 +17,7 @@ const TicTacToe = () => {
 
     const winner = checkWinner(newBoard); // 檢查是否有勝者
     if (winner) {
-      setGameStatus(`玩 家 ${winner} 獲勝!`); // 設置勝者訊息
+      setGameStatus(`玩家 ${winner} 獲勝!`); // 設置勝者訊息
     } else if (newBoard.every(cell => cell)) {
       setGameStatus('平局!'); // 如果遊戲板已滿，設置平局訊息
     } else {
@@ -50,35 +50,33 @@ const TicTacToe = () => {
   };
 
   return (
-    <div className="game-wrapper"> {/* 遊戲包裹 */}
-      <h1>Tic-Tac-Toe Game</h1> {/* 遊戲標題 */}
-      <p className="game-status">{gameStatus}</p> {/* 顯示遊戲狀態 */}
-      <div className="game-container"> {/* 遊戲容器 */}
-        <div className="game-board"> {/* 遊戲棋盤 */}
-          {gameBoard.map((cell, index) => (
-            <div 
-              key={index} 
-              className="cell" 
-              onClick={() => handleCellClick(index)} // 點擊格子事件處理
-            >
-              {cell} {/* 顯示格子內容 */}
-            </div>
-          ))}
-        </div>
-        <div className="game-info"> {/* 遊戲信息 */}
-          <h2>遊戲歷程</h2> {/* 遊戲歷史標題 */}
-          <button onClick={() => jumpToStep(0)}>遊戲開始</button> {/* 跳轉到遊戲開始 */}
-          {history.map((_, step) => (
-            step > 0 && (
-              <button key={step} onClick={() => jumpToStep(step)}>
-                回到第 {step} 步 {/* 跳轉到指定步驟 */}
-              </button>
-            )
-          ))}
-        </div>
+    <div className="game-wrapper">
+      <h1>Tic-Tac-Toe 遊戲</h1> {/* 顯示遊戲標題 */}
+      <p>{gameStatus}</p> {/* 顯示下一位玩家 */}
+      <div className="game-board">
+        {gameBoard.map((cell, index) => (
+          <div 
+            key={index} 
+            className="cell" 
+            onClick={() => handleCellClick(index)} // 點擊格子時調用 handleCellClick
+          >
+            {cell} {/* 顯示格子內容 */}
+          </div>
+        ))}
+      </div>
+      <div className="game-info">
+        <h2>遊戲歷程</h2> {/* 顯示遊戲歷史標題 */}
+        <button onClick={() => jumpToStep(0)}>遊戲開始</button> {/* 返回遊戲開始按鈕 */}
+        {history.map((_, step) => (
+          step > 0 && (
+            <button key={step} onClick={() => jumpToStep(step)}>
+              回到第 {step} 步 {/* 返回指定步驟按鈕 */}
+            </button>
+          )
+        ))}
       </div>
     </div>
   );
 };
 
-export default TicTacToe; // 導出井字遊戲組件
+export default TicTacToe;
