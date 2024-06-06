@@ -1,91 +1,103 @@
+/* App.css */
+/* 應用程式 */
 .App {
-  text-align: center; /* 將文字置中 */
+  text-align: center; /* 文本居中 */
 }
 
+/* 應用程式標頭 */
 .App-header {
-  background-color: #5c93ff; /* 設定背景顏色為藍色 */
-  padding: 20px; /* 設定內距為20像素 */
-  color: white; /* 設定文字顏色為白色 */
+  background-color: #5c93ff; /* 背景顏色 */
+  padding: 20px; /* 填充 */
+  color: white; /* 文字顏色 */
 }
 
+/* 信息容器 */
 .info-container {
-  background-color: #ff00ff; /* 設定背景顏色為粉紅色 */
-  padding: 20px; /* 設定內距為20像素 */
-  border-radius: 10px; /* 設定邊框圓角為10像素 */
-  width: 600px; /* 設定寬度為600像素 */
-  margin: auto; /* 自動調整外距使其置中 */
-  border: 5px solid #fff; /* 設定邊框顏色為白色，寬度為5像素 */
+  background-color: #ff00ff; /* 背景顏色 */
+  padding: 20px; /* 填充 */
+  border-radius: 10px; /* 圓角 */
+  width: 600px; /* 寬度 */
+  margin: auto; /* 自動外邊距 */
+  border: 5px solid #fff; /* 邊框 */
 }
 
+/* 滑動條容器 */
 .slider-container {
-  display: flex; /* 使用 Flexbox 佈局 */
-  justify-content: space-around; /* 元素均勻分布 */
-  margin-top: 10px; /* 設定上外距為10像素 */
+  display: flex; /* 彈性佈局 */
+  justify-content: space-around; /* 子元素均勻分佈 */
+  margin-top: 10px; /* 上邊距 */
 }
 
+/* 滑動條容器中的輸入框 */
 .slider-container input {
-  width: 100px; /* 設定寬度為100像素 */
+  width: 100px; /* 寬度 */
 }
 
+/* 顏色顯示 */
 .color-display {
-  margin: auto; /* 自動調整外距使其置中 */
-  border-radius: 10px; /* 設定邊框圓角為10像素 */
-  border: 5px solid #fff; /* 設定邊框顏色為白色，寬度為5像素 */
-  margin-top: 20px; /* 設定上外距為20像素 */
+  margin: auto; /* 自動外邊距 */
+  border-radius: 10px; /* 圓角 */
+  border: 5px solid #fff; /* 邊框 */
+  margin-top: 20px; /* 上邊距 */
 }
 
+/* 計算器包裹 */
 .calculator-wrapper {
-  margin-top: 20px; /* 設定上外距為20像素 */
+  margin-top: 20px; /* 上邊距 */
 }
 
+/* 計算器 */
 .calculator {
-  width: 320px; /* 設定寬度為320像素 */
-  margin: 0 auto; /* 自動調整外距使其置中 */
-  padding: 20px; /* 設定內距為20像素 */
-  background: #d3d3d3; /* 設定背景顏色為灰色 */
-  border-radius: 10px; /* 設定邊框圓角為10像素 */
-  box-shadow: 0 0 10px #000; /* 設定陰影效果 */
+  width: 320px; /* 寬度 */
+  margin: 0 auto; /* 自動外邊距 */
+  padding: 20px; /* 填充 */
+  background: #d3d3d3; /* 背景顏色 */
+  border-radius: 10px; /* 圓角 */
+  box-shadow: 0 0 10px #000; /* 陰影 */
 }
 
+/* 計算器顯示屏 */
 .calculator-display {
-  height: 60px; /* 設定高度為60像素 */
-  width: 100%; /* 設定寬度為100% */
-  background: #000; /* 設定背景顏色為黑色 */
-  color: #fff; /* 設定文字顏色為白色 */
-  font-size: 2rem; /* 設定字體大小為2rem */
-  text-align: right; /* 文字靠右對齊 */
-  padding: 10px; /* 設定內距為10像素 */
-  border-radius: 5px; /* 設定邊框圓角為5像素 */
-  margin-bottom: 10px; /* 設定下外距為10像素 */
+  height: 60px; /* 高度 */
+  width: 100%; /* 寬度 */
+  background: #000; /* 背景顏色 */
+  color: #fff; /* 文字顏色 */
+  font-size: 2rem; /* 字體大小 */
+  text-align: right; /* 文本對齊右側 */
+  padding: 10px; /* 填充 */
+  border-radius: 5px; /* 圓角 */
+  margin-bottom: 10px; /* 下邊距 */
 }
 
+/* 數字按鈕 */
 .button-number,
 .button-operator,
 .button-clear {
-  width: 60px; /* 設定寬度為60像素 */
-  height: 60px; /* 設定高度為60像素 */
-  font-size: 1.5rem; /* 設定字體大小為1.5rem */
-  margin: 5px; /* 設定外距為5像素 */
-  border: none; /* 移除邊框 */
-  border-radius: 50%; /* 設定邊框圓角為50%（圓形） */
-  color: #fff; /* 設定文字顏色為白色 */
-  transition: box-shadow 0.3s ease; /* 設定陰影效果的過渡 */
+  width: 60px; /* 寬度 */
+  height: 60px; /* 高度 */
+  font-size: 1.5rem; /* 字體大小 */
+  margin: 5px; /* 外邊距 */
+  border: none; /* 無邊框 */
+  border-radius: 50%; /* 圓形 */
+  color: #fff; /* 文字顏色 */
+  transition: box-shadow 0.3s ease; /* 陰影過渡效果 */
 }
 
 .button-number {
-  background: #fea0a0; /* 設定背景顏色為淺紅色 */
+  background: #fea0a0; /* 背景顏色 */
 }
 
 .button-operator {
-  background: #f9a825; /* 設定背景顏色為黃色 */
+  background: #f9a825; /* 背景顏色 */
 }
 
 .button-clear {
-  background: #d32f2f; /* 設定背景顏色為深紅色 */
+  background: #d32f2f; /* 背景顏色 */
 }
 
+/* 零按鈕 */
 .button-zero {
-  width: 130px; /* 設定寬度為130像素 */
+  width: 130px; /* 寬度 */
 }
 
 .button-number:hover,
@@ -94,43 +106,77 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* 添加陰影效果 */
 }
 
-/* Tic-Tac-Toe 组件样式 */
+/* 井字遊戲組件樣式 */
 .game-wrapper {
-  padding: 20px; /* 設定內距為20像素 */
-  border-radius: 15px; /* 設定邊框圓角為15像素 */
-  border: 5px solid #fff; /* 設定邊框顏色為白色，寬度為5像素 */
-  display: inline-block; /* 使元素變為行內區塊元素 */
-  background-color: #e57070; /* 設定背景顏色為淺紅色 */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 設定陰影效果 */
+  padding: 20px; /* 填充 */
+  border-radius: 15px; /* 圓角 */
+  border: 5px solid #fff; /* 邊框 */
+  display: inline-block; /* 行內塊元素 */
+  background-color: #e57070; /* 背景顏色 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 陰影 */
 }
 
+/* 井字遊戲容器 */
+.game-container {
+  display: flex; /* 彈性佈局 */
+  justify-content: center; /* 水平居中 */
+  align-items: flex-start; /* 頂部對齊 */
+}
+
+/* 井字遊戲棋盤 */
 .game-board {
-  display: grid; /* 使用網格佈局 */
-  grid-template-columns: repeat(3, 1fr); /* 設定三欄的網格佈局 */
-  gap: 5px; /* 設定網格間距為5像素 */
+  display: grid; /* 網格佈局 */
+  grid-template-columns: repeat(3, 1fr); /* 三列佈局 */
+  gap: 5px; /* 間距 */
+  margin-right: 20px; /* 右邊距 */
 }
 
+/* 棋格 */
 .cell {
-  width: 80px; /* 設定寬度為80像素 */
-  height: 80px; /* 設定高度為80像素 */
-  display: flex; /* 使用 Flexbox 佈局 */
-  justify-content: center; /* 水平居中對齊 */
-  align-items: center; /* 垂直居中對齊 */
-  background-color: #ffeb3b; /* 設定背景顏色為黃色 */
-  font-size: 2rem; /* 設定字體大小為2rem */
-  font-weight: bold; /* 設定字體加粗 */
-  cursor: pointer; /* 設定鼠標為指針狀 */
-  transition: background-color 0.3s ease; /* 設定背景顏色的過渡效果 */
+  width: 80px; /* 寬度 */
+  height: 80px; /* 高度 */
+  display: flex; /* 彈性佈局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  background-color: #ffeb3b; /* 背景顏色 */
+  font-size: 2rem; /* 字體大小 */
+  font-weight: bold; /* 字體粗細 */
+  cursor: pointer; /* 鼠標指針 */
+  transition: background-color 0.3s ease; /* 背景顏色過渡效果 */
 }
 
 .cell:hover {
-  background-color: #fdd835; /* 滑鼠懸停時改變背景顏色 */
+  background-color: #fdd835; /* 懸停背景顏色 */
 }
 
+/* 井字遊戲信息 */
 .game-info {
-  margin-top: 10px; /* 設定上外距為10像素 */
+  margin-top: 10px; /* 上邊距 */
 }
 
 .game-info p {
-  margin: 10px 0; /* 設定上下外距為10像素 */
+  margin: 10px 0; /* 垂直外邊距 */
+}
+
+/* 井字遊戲信息按鈕 */
+.game-info button {
+  display: block; /* 區塊元素 */
+  margin: 5px 0; /* 垂直外邊距 */
+  padding: 5px 10px; /* 填充 */
+  cursor: pointer; /* 鼠標指針 */
+  border: none; /* 無邊框 */
+  border-radius: 5px; /* 圓角 */
+  background-color: #5c93ff; /* 背景顏色 */
+  color: white; /* 文字顏色 */
+  transition: background-color 0.3s ease; /* 背景顏色過渡效果 */
+}
+
+.game-info button:hover {
+  background-color: #4a7ac7; /* 懸停背景顏色 */
+}
+
+/* 井字遊戲狀態信息 */
+.game-status {
+  font-size: 1.2rem; /* 字體大小 */
+  margin-bottom: 20px; /* 下邊距 */
 }
