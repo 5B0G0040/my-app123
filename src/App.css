@@ -174,3 +174,9 @@
 .game-info button:hover {
   background-color: #4a7ac7; /* 懸停背景顏色 */
 }
+
+/* 井字遊戲狀態信息 */
+.game-status {
+  font-size: 1.2rem; /* 字體大小 */
+  margin-bottom: 20px; /* 下邊距 */
+}
