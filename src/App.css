@@ -1,91 +1,91 @@
 .App {
-  text-align: center;
+  text-align: center; /* 將文字置中 */
 }
 
 .App-header {
-  background-color: #5c93ff;
-  padding: 20px;
-  color: white;
+  background-color: #5c93ff; /* 設定背景顏色為藍色 */
+  padding: 20px; /* 設定內距為20像素 */
+  color: white; /* 設定文字顏色為白色 */
 }
 
 .info-container {
-  background-color: #ff00ff;
-  padding: 20px;
-  border-radius: 10px;
-  width: 600px;
-  margin: auto;
-  border: 5px solid #fff;
+  background-color: #ff00ff; /* 設定背景顏色為粉紅色 */
+  padding: 20px; /* 設定內距為20像素 */
+  border-radius: 10px; /* 設定邊框圓角為10像素 */
+  width: 600px; /* 設定寬度為600像素 */
+  margin: auto; /* 自動調整外距使其置中 */
+  border: 5px solid #fff; /* 設定邊框顏色為白色，寬度為5像素 */
 }
 
 .slider-container {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 10px;
+  display: flex; /* 使用 Flexbox 佈局 */
+  justify-content: space-around; /* 元素均勻分布 */
+  margin-top: 10px; /* 設定上外距為10像素 */
 }
 
 .slider-container input {
-  width: 100px;
+  width: 100px; /* 設定寬度為100像素 */
 }
 
 .color-display {
-  margin: auto;
-  border-radius: 10px;
-  border: 5px solid #fff;
-  margin-top: 20px;
+  margin: auto; /* 自動調整外距使其置中 */
+  border-radius: 10px; /* 設定邊框圓角為10像素 */
+  border: 5px solid #fff; /* 設定邊框顏色為白色，寬度為5像素 */
+  margin-top: 20px; /* 設定上外距為20像素 */
 }
 
 .calculator-wrapper {
-  margin-top: 20px;
+  margin-top: 20px; /* 設定上外距為20像素 */
 }
 
 .calculator {
-  width: 320px;
-  margin: 0 auto;
-  padding: 20px;
-  background: #d3d3d3;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #000;
+  width: 320px; /* 設定寬度為320像素 */
+  margin: 0 auto; /* 自動調整外距使其置中 */
+  padding: 20px; /* 設定內距為20像素 */
+  background: #d3d3d3; /* 設定背景顏色為灰色 */
+  border-radius: 10px; /* 設定邊框圓角為10像素 */
+  box-shadow: 0 0 10px #000; /* 設定陰影效果 */
 }
 
 .calculator-display {
-  height: 60px;
-  width: 100%;
-  background: #000;
-  color: #fff;
-  font-size: 2rem;
-  text-align: right;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 10px;
+  height: 60px; /* 設定高度為60像素 */
+  width: 100%; /* 設定寬度為100% */
+  background: #000; /* 設定背景顏色為黑色 */
+  color: #fff; /* 設定文字顏色為白色 */
+  font-size: 2rem; /* 設定字體大小為2rem */
+  text-align: right; /* 文字靠右對齊 */
+  padding: 10px; /* 設定內距為10像素 */
+  border-radius: 5px; /* 設定邊框圓角為5像素 */
+  margin-bottom: 10px; /* 設定下外距為10像素 */
 }
 
 .button-number,
 .button-operator,
 .button-clear {
-  width: 60px;
-  height: 60px;
-  font-size: 1.5rem;
-  margin: 5px;
-  border: none;
-  border-radius: 50%;
-  color: #fff;
-  transition: box-shadow 0.3s ease;
+  width: 60px; /* 設定寬度為60像素 */
+  height: 60px; /* 設定高度為60像素 */
+  font-size: 1.5rem; /* 設定字體大小為1.5rem */
+  margin: 5px; /* 設定外距為5像素 */
+  border: none; /* 移除邊框 */
+  border-radius: 50%; /* 設定邊框圓角為50%（圓形） */
+  color: #fff; /* 設定文字顏色為白色 */
+  transition: box-shadow 0.3s ease; /* 設定陰影效果的過渡 */
 }
 
 .button-number {
-  background: #fea0a0;
+  background: #fea0a0; /* 設定背景顏色為淺紅色 */
 }
 
 .button-operator {
-  background: #f9a825;
+  background: #f9a825; /* 設定背景顏色為黃色 */
 }
 
 .button-clear {
-  background: #d32f2f;
+  background: #d32f2f; /* 設定背景顏色為深紅色 */
 }
 
 .button-zero {
-  width: 130px;
+  width: 130px; /* 設定寬度為130像素 */
 }
 
 .button-number:hover,
@@ -96,41 +96,41 @@
 
 /* Tic-Tac-Toe 组件样式 */
 .game-wrapper {
-  padding: 20px;
-  border-radius: 15px;
-  border: 5px solid #fff;
-  display: inline-block;
-  background-color: #e57070;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px; /* 設定內距為20像素 */
+  border-radius: 15px; /* 設定邊框圓角為15像素 */
+  border: 5px solid #fff; /* 設定邊框顏色為白色，寬度為5像素 */
+  display: inline-block; /* 使元素變為行內區塊元素 */
+  background-color: #e57070; /* 設定背景顏色為淺紅色 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 設定陰影效果 */
 }
 
 .game-board {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
+  display: grid; /* 使用網格佈局 */
+  grid-template-columns: repeat(3, 1fr); /* 設定三欄的網格佈局 */
+  gap: 5px; /* 設定網格間距為5像素 */
 }
 
 .cell {
-  width: 80px;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffeb3b;
-  font-size: 2rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  width: 80px; /* 設定寬度為80像素 */
+  height: 80px; /* 設定高度為80像素 */
+  display: flex; /* 使用 Flexbox 佈局 */
+  justify-content: center; /* 水平居中對齊 */
+  align-items: center; /* 垂直居中對齊 */
+  background-color: #ffeb3b; /* 設定背景顏色為黃色 */
+  font-size: 2rem; /* 設定字體大小為2rem */
+  font-weight: bold; /* 設定字體加粗 */
+  cursor: pointer; /* 設定鼠標為指針狀 */
+  transition: background-color 0.3s ease; /* 設定背景顏色的過渡效果 */
 }
 
 .cell:hover {
-  background-color: #fdd835;
+  background-color: #fdd835; /* 滑鼠懸停時改變背景顏色 */
 }
 
 .game-info {
-  margin-top: 10px;
+  margin-top: 10px; /* 設定上外距為10像素 */
 }
 
 .game-info p {
-  margin: 10px 0;
+  margin: 10px 0; /* 設定上下外距為10像素 */
 }
