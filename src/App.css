@@ -116,7 +116,7 @@
   display: flex; /* 使用 Flexbox 佈局 */
   justify-content: center; /* 水平居中對齊 */
   align-items: center; /* 垂直居中對齊 */
-  background-color: #ffeb3b; /* 設定背景顏色為黃色 */
+  background-color: #ffef5c; /* 設定背景顏色為黃色 */
   font-size: 2rem; /* 設定字體大小為2rem */
   font-weight: bold; /* 設定字體加粗 */
   cursor: pointer; /* 設定鼠標為指針狀 */
