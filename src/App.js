@@ -74,22 +74,32 @@ function App() {
 
   return (
     <div className="App">
+      {/* 應用程式的主要容器 */}
       <header className="App-header">
-        <h1>5B0G0040 張紘緯</h1>
+        {/* 頁首容器 */}
+        <h1>5B0G0040 張紘緯</h1> {/* 顯示學生編號和姓名 */}
         <div className="info-container">
-          <h2>RGB pentile</h2>
-          <h3>目前的顏色</h3>
+          {/* 顏色資訊容器 */}
+          <h2>RGB pentile</h2> {/* 顯示 RGB pentile 標題 */}
+          <h3>目前的顏色</h3> {/* 顯示當前選擇的顏色標題 */}
           <div className="slider-container">
+            {/* 顏色滑動條容器 */}
             <label>R: <input type="range" name="r" min="0" max="255" value={color.r} onChange={updateColor} /></label>
+            {/* 紅色值的滑動條輸入 */}
             <label>G: <input type="range" name="g" min="0" max="255" value={color.g} onChange={updateColor} /></label>
+            {/* 綠色值的滑動條輸入 */}
             <label>B: <input type="range" name="b" min="0" max="255" value={color.b} onChange={updateColor} /></label>
+            {/* 藍色值的滑動條輸入 */}
           </div>
         </div>
-        <div style={{ ...colorStyle, marginTop: '100px' }} className="color-display"></div> {/* 顏色顯示框 */}
-
+        <div style={{ ...colorStyle, marginTop: '100px' }} className="color-display"></div>
+        {/* 顏色顯示框，根據選擇的 RGB 值顯示對應的顏色，並且添加上邊距 100px */}
+        
         <div className="calculator-wrapper">
-          <h1>計算機</h1>
+          {/* 計算機容器 */}
+          <h1>計算機</h1> {/* 顯示計算機標題 */}
           <div className="calculator">
+            {/* 計算機功能的主容器 */}
             <div className="calculator-display">{calcDisplay}</div> {/* 計算器顯示屏 */}
             <button className="button-clear" onClick={clearCalc}>C</button> {/* 清除按鈕 */}
             <button className="button-operator" onClick={() => appendOperator('+/-')}>+/-</button> {/* 正負號切換按鈕 */}
