@@ -75,7 +75,6 @@
   width: 60px; /* 設置按鈕的寬度為 60px */
   height: 60px; /* 設置按鈕的高度為 60px */
   font-size: 1.5rem; /* 設置按鈕文字的大小為 1.5rem */
-  margin: 5px; /*
   margin: 5px; /* 設置按鈕的外邊距為 5px */
   border: none; /* 移除按鈕的邊框 */
   border-radius: 50%; /* 設置按鈕為圓形 */

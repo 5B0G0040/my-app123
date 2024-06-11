@@ -88,7 +88,7 @@ const TicTacToe = () => {
           ))}
         </div>
         <div className="game-info">
-          <h2>遊戲 歷程</h2>
+          <h2>遊戲歷程</h2>
           {/* 添加一個按鈕，點擊可回到遊戲開始時的狀態 */}
           <button onClick={() => jumpToStep(0)}>遊戲開始</button>
           {/* 遍歷歷史狀態並生成對應的按鈕 */}
