@@ -1,188 +1,40 @@
-/* 應用程式的主要容器 */
 .App {
-  text-align: center; /* 將所有文本居中對齊 */
+  text-align: center;
+  background-color: rgb(255, 186, 255);
 }
 
-/* 應用程式的標頭 */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
 .App-header {
-  background-color: #5c93ff; /* 設置標頭的背景顏色 */
-  padding: 20px; /* 設置標頭的內邊距為 20px */
-  color: white; /* 設置標頭中文本的顏色為白色 */
+  background-color: blueviolet;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-/* 信息容器，用於顯示應用程式的信息區域 */
-.info-container {
-  background-color: #ff00ff; /* 設置信息容器的背景顏色 */
-  padding: 20px; /* 設置信息容器的內邊距為 20px */
-  border-radius: 10px; /* 設置信息容器的圓角半徑為 10px */
-  width: 600px; /* 設置信息容器的寬度為 600px */
-  margin: auto; /* 自動設置外邊距，使容器水平居中 */
-  border: 5px solid #fff; /* 設置信息容器的邊框為 5px 的白色實線 */
+.App-link {
+  color: #61dafb;
 }
 
-/* 滑動條容器，用於包裹滑動條 */
-.slider-container {
-  display: flex; /* 使用彈性佈局顯示滑動條容器 */
-  justify-content: space-around; /* 在滑動條容器中均勻分佈子元素 */
-  margin-top: 10px; /* 設置滑動條容器的上邊距為 10px */
-}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
 
-/* 滑動條容器中的輸入框 */
-.slider-container input {
-  width: 100px; /* 設置滑動條輸入框的寬度為 100px */
-}
-
-/* 顏色顯示容器 */
-.color-display {
-  margin: auto; /* 自動設置外邊距，使容器水平居中 */
-  border-radius: 10px; /* 設置顏色顯示容器的圓角半徑為 10px */
-  border: 5px solid #fff; /* 設置顏色顯示容器的邊框為 5px 的白色實線 */
-  margin-top: 20px; /* 設置顏色顯示容器的上邊距為 20px */
-}
-
-/* 計算器包裹容器 */
-.calculator-wrapper {
-  margin-top: 20px; /* 設置計算器包裹容器的上邊距為 20px */
-}
-
-/* 計算器容器 */
-.calculator {
-  width: 320px; /* 設置計算器容器的寬度為 320px */
-  margin: 0 auto; /* 自動設置外邊距，使計算器水平居中 */
-  padding: 20px; /* 設置計算器容器的內邊距為 20px */
-  background: #d3d3d3; /* 設置計算器容器的背景顏色 */
-  border-radius: 10px; /* 設置計算器容器的圓角半徑為 10px */
-  box-shadow: 0 0 10px #000; /* 設置計算器容器的陰影效果 */
-}
-
-/* 計算器顯示屏 */
-.calculator-display {
-  height: 60px; /* 設置計算器顯示屏的高度為 60px */
-  width: 100%; /* 設置計算器顯示屏的寬度為 100% */
-  background: #000; /* 設置計算器顯示屏的背景顏色為黑色 */
-  color: #fff; /* 設置計算器顯示屏的文字顏色為白色 */
-  font-size: 2rem; /* 設置計算器顯示屏的文字大小為 2rem */
-  text-align: right; /* 將顯示屏上的文字右對齊 */
-  padding: 10px; /* 設置顯示屏的內邊距為 10px */
-  border-radius: 5px; /* 設置顯示屏的圓角半徑為 5px */
-  margin-bottom: 10px; /* 設置顯示屏的下邊距為 10px */
-}
-
-/* 計算器數字按鈕 */
-.button-number,
-.button-operator,
-.button-clear {
-  width: 60px; /* 設置按鈕的寬度為 60px */
-  height: 60px; /* 設置按鈕的高度為 60px */
-  font-size: 1.5rem; /* 設置按鈕文字的大小為 1.5rem */
-  margin: 5px; /* 設置按鈕的外邊距為 5px */
-  border: none; /* 移除按鈕的邊框 */
-  border-radius: 50%; /* 設置按鈕為圓形 */
-  color: #fff; /* 設置按鈕文字的顏色為白色 */
-  transition: box-shadow 0.3s ease; /* 設置按鈕的陰影過渡效果 */
-}
-
-/* 數字按鈕 */
-.button-number {
-  background: #fea0a0; /* 設置數字按鈕的背景顏色 */
-}
-
-/* 操作符按鈕 */
-.button-operator {
-  background: #f9a825; /* 設置操作符按鈕的背景顏色 */
-}
-
-/* 清除按鈕 */
-.button-clear {
-  background: #d32f2f; /* 設置清除按鈕的背景顏色 */
-}
-
-/* 零按鈕 */
-.button-zero {
-  width: 130px; /* 設置零按鈕的寬度為 130px */
-}
-
-/* 按鈕懸停效果 */
-.button-number:hover,
-.button-operator:hover,
-.button-clear:hover {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* 懸停時添加陰影效果 */
-}
-
-/* 井字遊戲組件樣式 */
-.game-wrapper {
-  padding: 20px; /* 設置井字遊戲組件的內邊距為 20px */
-  border-radius: 15px; /* 設置井字遊戲組件的圓角半徑為 15px */
-  border: 5px solid #fff; /* 設置井字遊戲組件的邊框為 5px 的白色實線 */
-  display: inline-block; /* 設置井字遊戲組件為行內塊元素 */
-  background-color: #e57070; /* 設置井字遊戲組件的背景顏色 */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 設置井字遊戲組件的陰影效果 */
-}
-
-/* 井字遊戲容器 */
-.game-container {
-  display: flex; /* 使用彈性佈局顯示井字遊戲容器 */
-  justify-content: center; /* 水平居中對齊 */
-  align-items: flex-start; /* 垂直頂部對齊 */
-}
-
-/* 井字遊戲棋盤 */
-.game-board {
-  display: grid; /* 使用網格佈局顯示井字遊戲棋盤 */
-  grid-template-columns: repeat(3, 1fr); /* 設置棋盤為三列佈局 */
-  gap: 5px; /* 設置棋盤格子之間的間距為 5px */
-  margin-right: 20px; /* 設置棋盤的右邊距為 20px */
-}
-
-/* 棋格 */
-.cell {
-  width: 80px; /* 設置棋格的寬度為 80px */
-  height: 80px; /* 設置棋格的高度為 80px */
-  display: flex; /* 使用彈性佈局顯示棋格 */
-  justify-content: center; /* 水平居中對齊 */
-  align-items: center; /* 垂直居中對齊 */
-  background-color: #ffeb3b; /* 設置棋格的背景顏色 */
-  font-size: 2rem; /* 設置棋格中文字的大小為 2rem */
-  font-weight: bold; /* 設置棋格中文字的粗體 */
-  cursor: pointer; /* 設置棋格的鼠標指針為手型 */
-  transition: background-color 0.3s ease; /* 設置棋格背景顏色的過渡效果 */
-}
-
-/* 棋格懸停效果 */
-.cell:hover {
-  background-color: #ffe058; /* 懸停時設置棋格的背景顏色 */
-}
-
-/* 井字遊戲信息 */
-.game-info {
-  margin-top: 10px; /* 設置井字遊戲信息區域的上邊距為 10px */
-}
-
-/* 井字遊戲信息段落 */
-.game-info p {
-  margin: 10px 0; /* 設置井字遊戲信息段落的上下外邊距為 10px */
-}
-
-/* 井字遊戲信息按鈕 */
-.game-info button {
-  display: block; /* 設置按鈕為區塊元素 */
-  margin: 5px 0; /* 設置按鈕的上下外邊距為 5px */
-  padding: 5px 10px; /* 設置按鈕的內邊距為 5px 上下和 10px 左右 */
-  cursor: pointer; /* 設置按鈕的鼠標指針為手型 */
-  border: none; /* 移除按鈕的邊框 */
-  border-radius: 5px; /* 設置按鈕的圓角半徑為 5px */
-  background-color: #5c93ff; /* 設置按鈕的背景顏色 */
-  color: white; /* 設置按鈕文字的顏色為白色 */
-  transition: background-color 0.3s ease; /* 設置按鈕背景顏色的過渡效果 */
-}
-
-/* 按鈕懸停效果 */
-.game-info button:hover {
-  background-color: #4a7ac7; /* 懸停時設置按鈕的背景顏色 */
-}
-
-/* 井字遊戲狀態信息 */
-.game-status {
-  font-size: 1.2rem; /* 設置狀態信息的文字大小為 1.2rem */
-  margin-bottom: 20px; /* 設置狀態信息的下邊距為 20px */
+  to {
+    transform: rotate(360deg);
+  }
 }

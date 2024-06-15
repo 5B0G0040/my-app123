@@ -1,134 +1,23 @@
-import React, { useState } from 'react';
-import './App.css'; // 引入全局 CSS 文件
-import TicTacToe from './TicTacToe'; // 導入 TicTacToe 組件
+import "./App.css";
+import MyRGBPanel from "./components/rgb-panel/MyRGBPanel"
+import MySlider from "./components/rgb-panel/MySlider";
+import MyCalculator from "./components/calculator/MyCalculator";
+import TicTacToe from "./components/tic-tac-toe/TicTacToe";
 
 function App() {
-  const [color, setColor] = useState({ r: 0, g: 0, b: 0 }); // 設置顏色狀態
-  const [calcDisplay, setCalcDisplay] = useState(''); // 設置計算器顯示狀態
-  const [currentInput, setCurrentInput] = useState(''); // 設置當前輸入狀態
-  const [operator, setOperator] = useState(''); // 設置操作符狀態
-  const [previousValue, setPreviousValue] = useState(''); // 設置前一值狀態
-
-  const updateColor = (e) => {
-    setColor({ ...color, [e.target.name]: parseInt(e.target.value, 10) }); // 更新顏色
-  };
-
-  const appendNumber = (number) => {
-    setCurrentInput(currentInput + number); // 添加數字
-    setCalcDisplay(currentInput + number); // 更新顯示
-  };
-
-  const appendOperator = (op) => {
-    if (op === '+/-') {
-      const newInput = currentInput.charAt(0) === '-' ? currentInput.slice(1) : '-' + currentInput;
-      setCurrentInput(newInput); // 切換正負號
-      setCalcDisplay(newInput); // 更新顯示
-    } else {
-      setOperator(op); // 設置操作符
-      setPreviousValue(currentInput); // 設置前一值
-      setCurrentInput(''); // 清空當前輸入
-    }
-  };
-
-  const clearCalc = () => {
-    setCurrentInput(''); // 清空當前輸入
-    setOperator(''); // 清空操作符
-    setPreviousValue(''); // 清空前一值
-    setCalcDisplay(''); // 清空顯示
-  };
-
-  const calculateResult = () => {
-    let result;
-    const currentValue = parseFloat(currentInput); // 解析當前值
-    const prevValue = parseFloat(previousValue); // 解析前一值
-    switch (operator) {
-      case '+':
-        result = prevValue + currentValue; // 加法運算
-        break;
-      case '-':
-        result = prevValue - currentValue; // 減法運算
-        break;
-      case '*':
-        result = prevValue * currentValue; // 乘法運算
-        break;
-      case '/':
-        result = prevValue / currentValue; // 除法運算
-        break;
-      case '%':
-        result = prevValue % currentValue; // 取模運算
-        break;
-      default:
-        return;
-    }
-    setCalcDisplay(result.toString()); // 更新顯示
-    setCurrentInput(result.toString()); // 設置當前輸入
-    setPreviousValue(''); // 清空前一值
-    setOperator(''); // 清空操作符
-  };
-
-  const colorStyle = {
-    backgroundColor: `rgb(${color.r}, ${color.g}, ${color.b})`, // 設置背景顏色
-    width: '90%', // 寬度
-    height: '500px', // 高度
-  };
-
   return (
     <div className="App">
-      {/* 應用程式的主要容器 */}
-      <header className="App-header">
-        {/* 頁首容器 */}
-        <h1>5B0G0040 張紘緯</h1> {/* 顯示學生編號和姓名 */}
-        <div className="info-container">
-          {/* 顏色資訊容器 */}
-          <h2>RGB pentile</h2> {/* 顯示 RGB pentile 標題 */}
-          <h3>目前的顏色</h3> {/* 顯示當前選擇的顏色標題 */}
-          <div className="slider-container">
-            {/* 顏色滑動條容器 */}
-            <label>R: <input type="range" name="r" min="0" max="255" value={color.r} onChange={updateColor} /></label>
-            {/* 紅色值的滑動條輸入 */}
-            <label>G: <input type="range" name="g" min="0" max="255" value={color.g} onChange={updateColor} /></label>
-            {/* 綠色值的滑動條輸入 */}
-            <label>B: <input type="range" name="b" min="0" max="255" value={color.b} onChange={updateColor} /></label>
-            {/* 藍色值的滑動條輸入 */}
-          </div>
-        </div>
-        <div style={{ ...colorStyle, marginTop: '100px' }} className="color-display"></div>
-        {/* 顏色顯示框，根據選擇的 RGB 值顯示對應的顏色，並且添加上邊距 100px */}
-        
-        <div className="calculator-wrapper">
-          {/* 計算機容器 */}
-          <h1>計算機</h1> {/* 顯示計算機標題 */}
-          <div className="calculator">
-            {/* 計算機功能的主容器 */}
-            <div className="calculator-display">{calcDisplay}</div> {/* 計算器顯示屏 */}
-            <button className="button-clear" onClick={clearCalc}>C</button> {/* 清除按鈕 */}
-            <button className="button-operator" onClick={() => appendOperator('+/-')}>+/-</button> {/* 正負號切換按鈕 */}
-            <button className="button-operator" onClick={() => appendOperator('%')}>%</button> {/* 取模按鈕 */}
-            <button className="button-operator" onClick={() => appendOperator('/')}>/</button> {/* 除法按鈕 */}<br />
-            <button className="button-number" onClick={() => appendNumber('7')}>7</button> {/* 數字按鈕 */}
-            <button className="button-number" onClick={() => appendNumber('8')}>8</button> {/* 數字按鈕 */}
-            <button className="button-number" onClick={() => appendNumber('9')}>9</button> {/* 數字按鈕 */}
-            <button className="button-operator" onClick={() => appendOperator('*')}>*</button> {/* 乘法按鈕 */}<br />
-            <button className="button-number" onClick={() => appendNumber('4')}>4</button> {/* 數字按鈕 */}
-            <button className="button-number" onClick={() => appendNumber('5')}>5</button> {/* 數字按鈕 */}
-            <button className="button-number" onClick={() => appendNumber('6')}>6</button> {/* 數字按鈕 */}
-            <button className="button-operator" onClick={() => appendOperator('-')}>-</button> {/* 減法按鈕 */}<br />
-            <button className="button-number" onClick={() => appendNumber('1')}>1</button> {/* 數字按鈕 */}
-            <button className="button-number" onClick={() => appendNumber('2')}>2</button> {/* 數字按鈕 */}
-            <button className="button-number" onClick={() => appendNumber('3')}>3</button> {/* 數字按鈕 */}
-            <button className="button-operator" onClick={() => appendOperator('+')}>+</button> {/* 加法按鈕 */}<br />
-            <button className="button-number button-zero" onClick={() => appendNumber('0')}>0</button> {/* 零按鈕 */}
-            <button className="button-number" onClick={() => appendNumber('.')}>.</button> {/* 小數點按鈕 */}
-            <button className="button-operator" onClick={calculateResult}>=</button> {/* 等於按鈕 */}
-          </div>
-        </div>
-
-        <div className="game-container">
-          <TicTacToe /> {/* 井字 遊戲組件 */}
-        </div>
-      </header>
+      <h1>JavaScript程式設計</h1>
+      <h2>5B0G0040 張紘緯</h2>
+      <MySlider />
+      <h1>MyRGBPanel</h1>
+      <MyRGBPanel />
+      <h1>MyCalculator</h1>
+      <MyCalculator />
+      <h1>Tic-Tac-Toe Game</h1>
+      <TicTacToe />
     </div>
   );
 }
 
-export default App; // 導出 App 組件
+export default App;

@@ -1,0 +1,53 @@
+.square {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border: 1px solid grey;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 50px;
+    margin: auto;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+}
+
+.square:hover {
+    background-color: deeppink;
+    color: white;
+}
+
+.game {
+    width: 400px;
+    margin: auto;
+    border: 3px solid blue;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.game-board {
+    background-color: gainsboro;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.game-info {
+    margin-left: 30px;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.board-row:after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+.status {
+    margin-bottom: 10px;
+}
