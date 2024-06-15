@@ -3,71 +3,82 @@ import './App.css'; // 引入全局 CSS 文件
 import TicTacToe from './TicTacToe'; // 導入 TicTacToe 組件
 
 function App() {
-  const [color, setColor] = useState({ r: 0, g: 0, b: 0 }); // 設置顏色狀態
-  const [calcDisplay, setCalcDisplay] = useState(''); // 設置計算器顯示狀態
-  const [currentInput, setCurrentInput] = useState(''); // 設置當前輸入狀態
-  const [operator, setOperator] = useState(''); // 設置操作符狀態
-  const [previousValue, setPreviousValue] = useState(''); // 設置前一值狀態
+  // 設置顏色狀態，初始值為紅色、綠色和藍色均為0
+  const [color, setColor] = useState({ r: 0, g: 0, b: 0 });
+  // 設置計算器顯示狀態，初始值為空字串
+  const [calcDisplay, setCalcDisplay] = useState('');
+  // 設置當前輸入狀態，初始值為空字串
+  const [currentInput, setCurrentInput] = useState('');
+  // 設置操作符狀態，初始值為空字串
+  const [operator, setOperator] = useState('');
+  // 設置前一值狀態，初始值為空字串
+  const [previousValue, setPreviousValue] = useState('');
 
+  // 更新顏色狀態
   const updateColor = (e) => {
-    setColor({ ...color, [e.target.name]: parseInt(e.target.value, 10) }); // 更新顏色
+    setColor({ ...color, [e.target.name]: parseInt(e.target.value, 10) });
   };
 
+  // 添加數字到當前輸入並更新顯示
   const appendNumber = (number) => {
-    setCurrentInput(currentInput + number); // 添加數字
-    setCalcDisplay(currentInput + number); // 更新顯示
+    setCurrentInput(currentInput + number);
+    setCalcDisplay(currentInput + number);
   };
 
+  // 添加操作符或切換正負號
   const appendOperator = (op) => {
     if (op === '+/-') {
       const newInput = currentInput.charAt(0) === '-' ? currentInput.slice(1) : '-' + currentInput;
-      setCurrentInput(newInput); // 切換正負號
-      setCalcDisplay(newInput); // 更新顯示
+      setCurrentInput(newInput);
+      setCalcDisplay(newInput);
     } else {
-      setOperator(op); // 設置操作符
-      setPreviousValue(currentInput); // 設置前一值
-      setCurrentInput(''); // 清空當前輸入
+      setOperator(op);
+      setPreviousValue(currentInput);
+      setCurrentInput('');
     }
   };
 
+  // 清空計算器的所有狀態
   const clearCalc = () => {
-    setCurrentInput(''); // 清空當前輸入
-    setOperator(''); // 清空操作符
-    setPreviousValue(''); // 清空前一值
-    setCalcDisplay(''); // 清空顯示
+    setCurrentInput('');
+    setOperator('');
+    setPreviousValue('');
+    setCalcDisplay('');
   };
 
+  // 計算結果並更新顯示
   const calculateResult = () => {
     let result;
-    const currentValue = parseFloat(currentInput); // 解析當前值
-    const prevValue = parseFloat(previousValue); // 解析前一值
+    const currentValue = parseFloat(currentInput);
+    const prevValue = parseFloat(previousValue);
     switch (operator) {
       case '+':
-        result = prevValue + currentValue; // 加法運算
+        result = prevValue + currentValue;
         break;
       case '-':
-        result = prevValue - currentValue; // 減法運算
+        result = prevValue - currentValue;
         break;
       case '*':
-        result = prevValue * currentValue; // 乘法運算
+        result = prevValue * currentValue;
         break;
       case '/':
-        result = prevValue / currentValue; // 除法運算
+        result = prevValue / currentValue;
         break;
       case '%':
-        result = prevValue % currentValue; // 取模運算
+        result = prevValue % currentValue;
         break;
       default:
         return;
     }
-    setCalcDisplay(result.toString()); // 更新顯示
-    setCurrentInput(result.toString()); // 設置當前輸入
-    setPreviousValue(''); // 清空前一值
-    setOperator(''); // 清空操作符
+    setCalcDisplay(result.toString());
+    setCurrentInput(result.toString());
+    setPreviousValue('');
+    setOperator('');
   };
 
+  // 設置背景顏色的樣式
   const colorStyle = {
-    backgroundColor: `rgb(${color.r}, ${color.g}, ${color.b})`, // 設置背景顏色
+    backgroundColor: `rgb(${color.r}, ${color.g}, ${color.b})`,
     width: '90%', // 寬度
     height: '500px', // 高度
   };
@@ -75,20 +86,20 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>5B0G0040 張紘緯</h1>
+        <h1>5B0G0040 張紘緯</h1> {/* 顯示學生編號和姓名 */}
         <div className="info-container">
-          <h2>RGB pentile</h2>
-          <h3>目前的顏色</h3>
+          <h2>RGB pentile</h2> {/* 顯示 RGB 顏色調整標題 */}
+          <h3>目前的顏色</h3> {/* 顯示目前的顏色標題 */}
           <div className="slider-container">
-            <label>R: <input type="range" name="r" min="0" max="255" value={color.r} onChange={updateColor} /></label>
-            <label>G: <input type="range" name="g" min="0" max="255" value={color.g} onChange={updateColor} /></label>
-            <label>B: <input type="range" name="b" min="0" max="255" value={color.b} onChange={updateColor} /></label>
+            <label>R: <input type="range" name="r" min="0" max="255" value={color.r} onChange={updateColor} /></label> {/* 紅色調整滑桿 */}
+            <label>G: <input type="range" name="g" min="0" max="255" value={color.g} onChange={updateColor} /></label> {/* 綠色調整滑桿 */}
+            <label>B: <input type="range" name="b" min="0" max="255" value={color.b} onChange={updateColor} /></label> {/* 藍色調整滑桿 */}
           </div>
         </div>
-        <div style={{ ...colorStyle, marginTop: '100px' }} className="color-display"></div> {/* 顏色顯示框 */}
+        <div style={{ ...colorStyle, marginTop: '100px' }} className="color-display"></div> {/* 顯示調整後的顏色框 */}
 
         <div className="calculator-wrapper">
-          <h1>計算機</h1>
+          <h1>計算機</h1> {/* 計算器標題 */}
           <div className="calculator">
             <div className="calculator-display">{calcDisplay}</div> {/* 計算器顯示屏 */}
             <button className="button-clear" onClick={clearCalc}>C</button> {/* 清除按鈕 */}
@@ -114,7 +125,7 @@ function App() {
         </div>
 
         <div className="game-container">
-          <TicTacToe /> {/* 井字 遊戲組件 */}
+          <TicTacToe /> {/* 井字遊戲組件 */}
         </div>
       </header>
     </div>
