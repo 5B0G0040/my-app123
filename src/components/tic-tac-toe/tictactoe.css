@@ -1,53 +1,52 @@
 .square {
-    background-color: white;
-    width: 50px;
-    height: 50px;
-    border: 1px solid grey;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    line-height: 50px;
-    margin: auto;
-    float: left;
-    text-align: center;
-    cursor: pointer;
+    background-color: white; /* 方格背景顏色 */
+    width: 50px; /* 方格寬度 */
+    height: 50px; /* 方格高度 */
+    border: 1px solid grey; /* 方格邊框 */
+    font-size: 24px; /* 方格文字大小 */
+    font-weight: bold; /* 方格文字加粗 */
+    cursor: pointer; /* 滑鼠懸停時顯示手型指示 */
+    line-height: 50px; /* 方格文字垂直居中 */
+    margin: auto; /* 自動外邊距 */
+    float: left; /* 左浮動 */
+    text-align: center; /* 文字居中 */
 }
 
 .square:hover {
-    background-color: deeppink;
-    color: white;
+    background-color: deeppink; /* 滑鼠懸停時的背景顏色 */
+    color: white; /* 滑鼠懸停時的文字顏色 */
 }
 
 .game {
-    width: 400px;
-    margin: auto;
-    border: 3px solid blue;
-    border-radius: 20px;
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    width: 400px; /* 遊戲區域寬度 */
+    margin: auto; /* 自動外邊距 */
+    border: 3px solid blue; /* 遊戲區域邊框 */
+    border-radius: 20px; /* 遊戲區域邊框圓角 */
+    padding: 20px; /* 遊戲區域內邊距 */
+    display: flex; /* 使用彈性盒子布局 */
+    flex-direction: row; /* 主軸方向為水平排列 */
+    align-items: center; /* 元素在交叉軸上居中對齊 */
 }
 
 .game-board {
-    background-color: gainsboro;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid black;
+    background-color: gainsboro; /* 遊戲棋盤背景顏色 */
+    padding: 10px; /* 遊戲棋盤內邊距 */
+    border-radius: 10px; /* 遊戲棋盤邊框圓角 */
+    border: 1px solid black; /* 遊戲棋盤邊框 */
 }
 
 .game-info {
-    margin-left: 30px;
-    margin-right: 10px;
-    padding: 5px;
+    margin-left: 30px; /* 遊戲信息區域左外邊距 */
+    margin-right: 10px; /* 遊戲信息區域右外邊距 */
+    padding: 5px; /* 遊戲信息區域內邊距 */
 }
 
 .board-row:after {
-    clear: both;
-    content: '';
-    display: table;
+    clear: both; /* 清除浮動 */
+    content: ''; /* 生成匿名內容 */
+    display: table; /* 以表格方式顯示 */
 }
 
 .status {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* 狀態信息底部外邊距 */
 }
