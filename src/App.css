@@ -1,182 +1,40 @@
-/* App.css */
-/* 應用程式 */
 .App {
-  text-align: center; /* 文本居中 */
+  text-align: center;
+  background-color: antiquewhite;
 }
 
-/* 應用程式標頭 */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
 .App-header {
-  background-color: #5c93ff; /* 背景顏色 */
-  padding: 20px; /* 填充 */
-  color: white; /* 文字顏色 */
+  background-color: blueviolet;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-/* 信息容器 */
-.info-container {
-  background-color: #ff00ff; /* 背景顏色 */
-  padding: 20px; /* 填充 */
-  border-radius: 10px; /* 圓角 */
-  width: 600px; /* 寬度 */
-  margin: auto; /* 自動外邊距 */
-  border: 5px solid #fff; /* 邊框 */
+.App-link {
+  color: #61dafb;
 }
 
-/* 滑動條容器 */
-.slider-container {
-  display: flex; /* 彈性佈局 */
-  justify-content: space-around; /* 子元素均勻分佈 */
-  margin-top: 10px; /* 上邊距 */
-}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
 
-/* 滑動條容器中的輸入框 */
-.slider-container input {
-  width: 100px; /* 寬度 */
-}
-
-/* 顏色顯示 */
-.color-display {
-  margin: auto; /* 自動外邊距 */
-  border-radius: 10px; /* 圓角 */
-  border: 5px solid #fff; /* 邊框 */
-  margin-top: 20px; /* 上邊距 */
-}
-
-/* 計算器包裹 */
-.calculator-wrapper {
-  margin-top: 20px; /* 上邊距 */
-}
-
-/* 計算器 */
-.calculator {
-  width: 320px; /* 寬度 */
-  margin: 0 auto; /* 自動外邊距 */
-  padding: 20px; /* 填充 */
-  background: #d3d3d3; /* 背景顏色 */
-  border-radius: 10px; /* 圓角 */
-  box-shadow: 0 0 10px #000; /* 陰影 */
-}
-
-/* 計算器顯示屏 */
-.calculator-display {
-  height: 60px; /* 高度 */
-  width: 100%; /* 寬度 */
-  background: #000; /* 背景顏色 */
-  color: #fff; /* 文字顏色 */
-  font-size: 2rem; /* 字體大小 */
-  text-align: right; /* 文本對齊右側 */
-  padding: 10px; /* 填充 */
-  border-radius: 5px; /* 圓角 */
-  margin-bottom: 10px; /* 下邊距 */
-}
-
-/* 數字按鈕 */
-.button-number,
-.button-operator,
-.button-clear {
-  width: 60px; /* 寬度 */
-  height: 60px; /* 高度 */
-  font-size: 1.5rem; /* 字體大小 */
-  margin: 5px; /* 外邊距 */
-  border: none; /* 無邊框 */
-  border-radius: 50%; /* 圓形 */
-  color: #fff; /* 文字顏色 */
-  transition: box-shadow 0.3s ease; /* 陰影過渡效果 */
-}
-
-.button-number {
-  background: #fea0a0; /* 背景顏色 */
-}
-
-.button-operator {
-  background: #f9a825; /* 背景顏色 */
-}
-
-.button-clear {
-  background: #d32f2f; /* 背景顏色 */
-}
-
-/* 零按鈕 */
-.button-zero {
-  width: 130px; /* 寬度 */
-}
-
-.button-number:hover,
-.button-operator:hover,
-.button-clear:hover {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* 添加陰影效果 */
-}
-
-/* 井字遊戲組件樣式 */
-.game-wrapper {
-  padding: 20px; /* 填充 */
-  border-radius: 15px; /* 圓角 */
-  border: 5px solid #fff; /* 邊框 */
-  display: inline-block; /* 行內塊元素 */
-  background-color: #e57070; /* 背景顏色 */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 陰影 */
-}
-
-/* 井字遊戲容器 */
-.game-container {
-  display: flex; /* 彈性佈局 */
-  justify-content: center; /* 水平居中 */
-  align-items: flex-start; /* 頂部對齊 */
-}
-
-/* 井字遊戲棋盤 */
-.game-board {
-  display: grid; /* 網格佈局 */
-  grid-template-columns: repeat(3, 1fr); /* 三列佈局 */
-  gap: 5px; /* 間距 */
-  margin-right: 20px; /* 右邊距 */
-}
-
-/* 棋格 */
-.cell {
-  width: 80px; /* 寬度 */
-  height: 80px; /* 高度 */
-  display: flex; /* 彈性佈局 */
-  justify-content: center; /* 水平居中 */
-  align-items: center; /* 垂直居中 */
-  background-color: #ffeb3b; /* 背景顏色 */
-  font-size: 2rem; /* 字體大小 */
-  font-weight: bold; /* 字體粗細 */
-  cursor: pointer; /* 鼠標指針 */
-  transition: background-color 0.3s ease; /* 背景顏色過渡效果 */
-}
-
-.cell:hover {
-  background-color: #ffe058; /* 懸停背景顏色 */
-}
-
-/* 井字遊戲信息 */
-.game-info {
-  margin-top: 10px; /* 上邊距 */
-}
-
-.game-info p {
-  margin: 10px 0; /* 垂直外邊距 */
-}
-
-/* 井字遊戲信息按鈕 */
-.game-info button {
-  display: block; /* 區塊元素 */
-  margin: 5px 0; /* 垂直外邊距 */
-  padding: 5px 10px; /* 填充 */
-  cursor: pointer; /* 鼠標指針 */
-  border: none; /* 無邊框 */
-  border-radius: 5px; /* 圓角 */
-  background-color: #5c93ff; /* 背景顏色 */
-  color: white; /* 文字顏色 */
-  transition: background-color 0.3s ease; /* 背景顏色過渡效果 */
-}
-
-.game-info button:hover {
-  background-color: #4a7ac7; /* 懸停背景顏色 */
-}
-
-/* 井字遊戲狀態信息 */
-.game-status {
-  font-size: 1.2rem; /* 字體大小 */
-  margin-bottom: 20px; /* 下邊距 */
+  to {
+    transform: rotate(360deg);
+  }
 }
